@@ -1,18 +1,28 @@
+// interfaces/index.ts
 export interface PropertyProps {
+  id: string;
   name: string;
+  description: string;
+  image: string;
+  images?: string[];
+  rating: number;
   address: {
-    state: string;
+    street: string;
     city: string;
     country: string;
   };
-  rating: number;
   category: string[];
   price: number;
-  offers: {
-    bed: string;
-    shower: string;
-    occupants: string;
+  reviews?: {
+    name: string;
+    avatar: string;
+    rating: number;
+    comment: string;
+    date: string;
+  }[];
+  host?: {
+    name: string;
+    avatar: string;
+    about: string;
   };
-  image: string;
-  discount: string;
 }
